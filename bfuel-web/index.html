@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BFUEL Gasolineras · Algeciras y Campamento</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>:root{--cards:url(img/5-tarjetas.jpg)}
+:root{--bg:#F4F7F5;--ink:#0A1F2C;--card:#fff;--line:#d9e2de;--muted:#4b5f69;--sea:#0B2A3B;--deep:#06151f;--foam:#7FD6CF;--sun:#FFB020;--r:22px;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#08161f;--ink:#EAF2EF;--card:#0e2431;--line:#1c3948;--muted:#9fb4bd}}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "DM Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","DM Sans",sans-serif;line-height:1.05;letter-spacing:-.02em;margin:0}
+h2{font-size:clamp(2rem,4.6vw,3.6rem);font-weight:800}h3{font-size:1.35rem;font-weight:700}
+p{margin:0 0 1em;max-width:62ch}a{color:inherit}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+.w{width:min(1180px,92%);margin:auto}.sec{padding:clamp(72px,10vw,140px) 0}
+.dark{background:var(--sea);color:#EAF2EF;--card:#0e2f42;--line:#1f4458;--muted:#a9c2cc}
+.btn{display:inline-block;border:0;cursor:pointer;font:700 1rem "DM Sans";padding:15px 28px;border-radius:99px;background:var(--sun);color:#1a1200;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px -8px rgba(255,176,32,.7)}
+.btn.o{background:transparent;color:inherit;border:1.5px solid currentColor}
+nav{position:fixed;inset:0 0 auto;z-index:20;padding-top:env(safe-area-inset-top,0px);backdrop-filter:blur(14px);background:rgba(6,21,31,.72);color:#fff}
+nav .w{display:flex;align-items:center;justify-content:space-between;height:68px;gap:20px}
+.logo{font:800 1.6rem "Bricolage Grotesque";text-decoration:none;letter-spacing:-.03em}.logo i{color:var(--sun);font-style:normal}
+nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-size:.95rem}nav ul a{text-decoration:none;opacity:.85}nav ul a:hover{opacity:1}
+@media(max-width:900px){nav ul{display:none}}
+/* hero */
+.hero{position:relative;min-height:100svh;display:grid;align-items:end;background:radial-gradient(120% 80% at 80% 10%,#14506a 0,var(--sea) 45%,var(--deep) 100%);color:#fff;overflow:hidden;padding:130px 0 70px}
+.hero h1{font-size:clamp(3rem,8vw,7rem);font-weight:800;max-width:11ch}
+.hero p{font-size:1.2rem;color:#c5d8de;margin:26px 0 34px}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+.bub{position:absolute;bottom:-60px;border-radius:50%;background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.55),rgba(127,214,207,.12) 60%);border:1px solid rgba(255,255,255,.25);animation:up linear infinite}
+@keyframes up{to{transform:translateY(-120vh) translateX(30px)}}
+.board{position:absolute;right:4%;top:140px;background:#031018;border:1px solid #1b4256;border-radius:18px;padding:18px 22px;font:700 1rem "DM Sans";width:260px;box-shadow:0 30px 70px -20px #000}
+.board div{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #123142}.board div:last-child{border:0}
+.board b{color:var(--sun);font-family:"Bricolage Grotesque"}.board small{display:block;color:#7fa2b0;font-weight:400;margin-bottom:6px}
+@media(max-width:900px){.board{display:none}}
+@media(prefers-reduced-motion:reduce){.bub{animation:none}html{scroll-behavior:auto}}
+/* grids */
+.g{display:grid;gap:22px}.g4{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}.g2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:30px}
+.head{margin-bottom:54px;display:grid;gap:18px}.head p{color:var(--muted);font-size:1.12rem}
+.fuel{border-radius:28px 28px 28px 6px}.fuel h3{font-size:1.7rem}.fuel span{color:var(--muted);font-size:.95rem}
+.coin{display:inline-grid;place-items:center;width:56px;height:56px;border-radius:50%;background:var(--sun);color:#1a1200;font:800 1.3rem "Bricolage Grotesque";margin-bottom:18px}
+/* wash */
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
+.tab{background:transparent;color:inherit;border:1.5px solid var(--line);border-radius:99px;padding:11px 20px;font:500 1rem "DM Sans";cursor:pointer}
+.tab[aria-selected=true]{background:var(--foam);color:#04202a;border-color:var(--foam);font-weight:700}
+.panel{display:none}.panel.on{display:block;animation:fi .35s}@keyframes fi{from{opacity:0}}
+.panel ul{padding-left:1.1em;color:var(--muted)}.panel li{margin:.3em 0}
+/* forms */
+form{display:grid;gap:16px}.row{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+label{display:grid;gap:6px;font-weight:700;font-size:.92rem}
+input,select,textarea{font:400 1rem "DM Sans";padding:14px 16px;border-radius:14px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);width:100%}
+.dark input,.dark select,.dark textarea{background:#082235;color:#fff}
+input:focus,select:focus,textarea:focus{border-color:var(--foam);outline:none;box-shadow:0 0 0 3px rgba(127,214,207,.35)}
+.chk{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:.9rem;color:var(--muted)}.chk input{width:20px;height:20px;margin-top:3px;flex:none;accent-color:var(--sun)}
+.chk a,.lnk{color:var(--foam);background:none;border:0;padding:0;font:inherit;text-decoration:underline;cursor:pointer}
+.err{color:#ff8a7a;font-size:.88rem;min-height:1.2em;margin:0}
+.ok{display:none;background:rgba(127,214,207,.14);border:1px solid var(--foam);border-radius:16px;padding:22px}.ok.on{display:block;animation:fi .4s}
+.sum{background:rgba(255,176,32,.12);border:1px dashed var(--sun);border-radius:14px;padding:14px 18px;font-size:.95rem}
+.split{display:grid;gap:54px;grid-template-columns:1fr 1.1fr;align-items:start}@media(max-width:900px){.split{grid-template-columns:1fr}}
+.news{background:linear-gradient(120deg,var(--sun),#ffd27a);color:#1a1200;border-radius:34px;padding:clamp(34px,6vw,72px)}
+.news form{grid-template-columns:1fr auto;align-items:start}.news input{background:#fff;color:#111;border-color:transparent}
+@media(max-width:640px){.news form{grid-template-columns:1fr}}
+.news .chk,.news .err{color:#4a3800}.news .lnk{color:#1a1200}
+footer{background:var(--deep);color:#a9c2cc;padding:70px 0 40px;font-size:.92rem}
+footer .g{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}footer a{display:block;text-decoration:none;margin:6px 0}footer a:hover{color:#fff}
+dialog{max-width:640px;width:92%;border:0;border-radius:24px;padding:34px;background:var(--card);color:var(--ink)}dialog::backdrop{background:rgba(3,16,24,.7);backdrop-filter:blur(4px)}
+dialog h3{margin-bottom:14px}dialog p{font-size:.95rem;color:var(--muted)}
+
+.hero .w{position:relative;z-index:2}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 40%;z-index:0;transform:scale(1.04);animation:heroIn 2.4s cubic-bezier(.2,.7,.2,1) both}
+@keyframes heroIn{from{transform:scale(1.14);filter:blur(6px)}to{transform:scale(1.04);filter:none}}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(6,21,31,.92) 0%,rgba(6,21,31,.6) 45%,rgba(6,21,31,.15) 100%),linear-gradient(0deg,rgba(6,21,31,.85) 0%,rgba(6,21,31,0) 40%)}
+.tag{font:600 clamp(1.25rem,2.4vw,1.7rem)/1.3 "Bricolage Grotesque",sans-serif;color:#fff;margin:0 0 34px;max-width:24ch;letter-spacing:-.01em}.tag em{font-style:normal;color:var(--foam)}
+.kick{font:700 .85rem "DM Sans";letter-spacing:.18em;text-transform:uppercase;color:var(--sun);margin:0 0 22px}
+.hero h1{text-shadow:0 4px 30px rgba(0,0,0,.35)}
+@media(prefers-reduced-motion:reduce){.hero-bg{animation:none}}
+
+.ph{position:relative;overflow:hidden;border-radius:var(--r);background:#0e2f42}
+.ph img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.14);will-change:transform}
+.ph::after{content:"";position:absolute;inset:55% 0 0;background:linear-gradient(transparent,rgba(3,16,24,.75));pointer-events:none}
+.ph.full::after{display:none}.ph.full img{transform:none!important}
+.wash-hero{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:var(--r);overflow:hidden;margin:0 0 46px;background:var(--sea);min-height:360px}
+.wash-hero img{width:100%;height:100%;object-fit:cover;display:block;transform:none!important}
+.wash-txt{padding:clamp(28px,5vw,64px);display:flex;flex-direction:column;justify-content:center;color:#fff;background:linear-gradient(135deg,#0B2A3B,#06151f)}
+.wash-txt h3{font-size:clamp(1.9rem,4vw,3rem);font-weight:800;line-height:1.02;margin:0 0 16px}
+.wash-txt p{font:600 clamp(1.1rem,2vw,1.35rem) "Bricolage Grotesque",sans-serif;color:var(--foam);margin:0 0 14px}
+.wash-txt small{color:#a9c2cc;font-size:.95rem;letter-spacing:.04em}
+@media(max-width:760px){.wash-hero{grid-template-columns:1fr}.wash-hero img{height:260px}}
+.svcs{display:grid;gap:18px}
+.svc h3{font-size:1.5rem;margin-bottom:8px}.svc>p{color:var(--muted);margin:0 0 14px}
+.svc ul{list-style:none;padding:0;margin:0 0 22px;display:grid;gap:8px}
+.svc li{position:relative;padding-left:24px;color:var(--ink);font-size:.97rem}
+.svc li::before{content:"";position:absolute;left:0;top:.62em;width:10px;height:10px;border-radius:50%;background:var(--sun)}
+.svc-btn{width:100%;text-align:center;cursor:pointer;font:700 1rem "DM Sans";padding:14px 22px;border-radius:99px;border:1.5px solid var(--ink);background:transparent;color:var(--ink);transition:background .2s,color .2s,border-color .2s}
+.svc-btn:hover,.svc-btn.on{background:var(--sun);border-color:var(--sun);color:#1a1200}
+.svc-auto{background:linear-gradient(135deg,#0B2A3B,#06151f);color:#EAF2EF;border-color:#1f4458}
+.svc-auto h3{color:#fff}.svc-auto p{color:#a9c2cc}.svc-auto li{color:#EAF2EF}.svc-auto .svc-btn{border-color:var(--foam);color:var(--foam)}
+.svc-auto .svc-btn:hover{background:var(--foam);color:#04202a}
+.team-split{grid-template-columns:1.35fr 1fr;align-items:center}@media(max-width:760px){.team-split{grid-template-columns:1fr;gap:28px}.team-split .ph{aspect-ratio:4/3!important}}
+.team-wrap{display:grid;gap:30px;justify-items:start}.team-wrap h2{margin:0}.team-photo{width:100%}.team-note{font-size:.88rem;color:var(--muted);margin:0;max-width:60ch;line-height:1.5}
+.wash-title{font-size:clamp(4rem,12vw,9rem);font-weight:800;letter-spacing:-.04em;line-height:.9;margin:0}.wash-sub{font:600 clamp(1.4rem,3vw,2.1rem)/1.2 "Bricolage Grotesque",sans-serif;color:var(--sun);margin:0 0 6px}
+.auto-ph{aspect-ratio:16/10;margin:-30px -30px 24px;border-radius:var(--r) var(--r) 0 0}.auto-ph img{width:100%;height:100%;object-fit:cover;display:block}
+.price{margin:0 0 18px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;color:var(--muted)}.price b{font:800 1.7rem "Bricolage Grotesque",sans-serif;color:var(--ink)}.price small{font-size:.8rem;opacity:.8}
+.book{--bp:clamp(20px,3vw,30px);padding:var(--bp)}.book form{gap:14px}
+.bk-h small{display:block;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-size:.78rem}.bk-h b{font:800 1.5rem "Bricolage Grotesque",sans-serif}
+.bk-step{display:flex;align-items:baseline;gap:14px;border-bottom:1px solid var(--line);padding:18px 0 10px;margin-top:6px}.bk-step i{font-style:normal;color:var(--sun);font-size:.85rem;letter-spacing:.14em}.bk-step h4{margin:0;font:800 1.5rem "Bricolage Grotesque",sans-serif;text-transform:uppercase}.bk-step span{margin-left:auto;color:var(--muted);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase}
+.bk-svc{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.bk-s{display:grid;gap:2px;text-align:left;cursor:pointer;font:500 .95rem "DM Sans";color:#fff;background:transparent;border:1.5px solid var(--line);border-radius:16px;padding:14px}
+.bk-s b{font:800 1.05rem "Bricolage Grotesque",sans-serif;text-transform:capitalize}.bk-s small{color:var(--muted)}.bk-s em{font-style:normal;color:var(--foam);font-weight:700}
+.bk-s[aria-pressed=true]{background:var(--sun);border-color:var(--sun);color:#1a1200}.bk-s[aria-pressed=true] small,.bk-s[aria-pressed=true] em{color:#1a1200}
+.bk-nav{display:flex;gap:8px;align-items:stretch}.bk-arr{flex:none;width:38px;border-radius:14px;border:1.5px solid var(--line);background:transparent;color:#fff;font-size:1.4rem;cursor:pointer}.bk-arr:disabled{opacity:.3;cursor:default}
+.bk-days{flex:1;display:grid;grid-template-columns:repeat(7,1fr);gap:6px;min-width:0}
+.bk-day{display:grid;justify-items:center;gap:2px;padding:10px 0 8px;border-radius:14px;border:1.5px solid var(--line);background:transparent;color:#fff;cursor:pointer;font-family:"DM Sans"}
+.bk-day small{font-size:.66rem;letter-spacing:.1em;color:var(--muted)}.bk-day b{font:800 1.25rem "Bricolage Grotesque",sans-serif}
+.bk-day[aria-pressed=true]{background:var(--sun);border-color:var(--sun);color:#1a1200}.bk-day[aria-pressed=true] small{color:#1a1200}
+.bk-day:disabled{opacity:.35;cursor:default}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:8px}.bk-day .dot{margin:0}.dot.l{background:#35d08a}.dot.p{background:#e0a21b}.dot.n{border:1.5px solid #7d97a3;background:transparent}
+.bk-leg{display:flex;gap:16px;flex-wrap:wrap;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+#bk-slots h5{margin:14px 0 8px;font:500 .8rem "DM Sans";letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.bk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(88px,1fr));gap:8px}
+.bk-t{padding:13px 0;border-radius:14px;border:1.5px solid var(--line);background:transparent;color:#fff;font:500 1rem "DM Sans";cursor:pointer}
+.bk-t:hover{border-color:var(--foam)}.bk-t[aria-pressed=true]{background:var(--sun);border-color:var(--sun);color:#1a1200;font-weight:700}
+.bk-none{color:var(--muted);margin:14px 0 0}
+.bk-bar{position:sticky;bottom:0;z-index:5;display:grid;grid-template-columns:1fr auto;gap:12px 16px;align-items:center;margin:10px calc(-1*var(--bp)) calc(-1*var(--bp));padding:16px var(--bp);background:rgba(6,21,31,.94);backdrop-filter:blur(10px);border-top:1px solid var(--line);border-radius:0 0 var(--r) var(--r)}
+.bk-bar small{display:block;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}.bk-bar span{color:#fff}
+.bk-pr{text-align:right}.bk-pr b{font:800 1.9rem "Bricolage Grotesque",sans-serif}.bk-pr small{letter-spacing:0;text-transform:none;font-size:.7rem}
+.bk-bar .btn{grid-column:1/-1;width:100%;padding:16px}
+@media(max-width:480px){.bk-svc{grid-template-columns:1fr}.bk-s{grid-template-columns:1fr auto auto;align-items:center;gap:10px}.bk-day small{font-size:.58rem}.bk-day b{font-size:1.05rem}.bk-arr{width:30px}}
+.burger{display:none;background:none;border:0;padding:8px;cursor:pointer;margin-left:-4px}.burger i{display:block;width:24px;height:2px;background:#fff;margin:5px 0;border-radius:2px;transition:transform .3s,opacity .3s}.burger[aria-expanded=true] i:nth-child(1){transform:translateY(7px) rotate(45deg)}.burger[aria-expanded=true] i:nth-child(2){opacity:0}.burger[aria-expanded=true] i:nth-child(3){transform:translateY(-7px) rotate(-45deg)}.mm{position:fixed;top:68px;left:0;right:0;z-index:19;background:rgba(6,21,31,.97);backdrop-filter:blur(14px);color:#fff;padding:8px 4% 24px;display:grid;opacity:0;transform:translateY(-8px);pointer-events:none;transition:opacity .3s,transform .3s}.mm.on{opacity:1;transform:none;pointer-events:auto}.mm a{padding:16px 4px;border-bottom:1px solid #1c3948;text-decoration:none;font:700 1.15rem "Bricolage Grotesque",sans-serif}.mm a:hover{color:var(--sun)}@media(max-width:900px){.burger{display:block}}
+.cap{position:absolute;z-index:2;left:20px;right:20px;bottom:16px;color:#fff;font:700 .95rem "DM Sans";text-shadow:0 2px 12px #0008}
+.ph.cards{background:var(--cards) var(--bp,center)/cover no-repeat;aspect-ratio:1/1;max-width:480px}
+.card.im{overflow:hidden}.card.im .ph{margin:-30px -30px 24px;border-radius:0;aspect-ratio:4/3}.card.im .ph::after{display:none}
+.hero-ph{position:absolute;right:4%;top:110px;width:min(32vw,400px);height:min(62vh,540px);z-index:1;left:50%;bottom:22px;transform:translateX(-50%);z-index:2;color:#c5d8de;font-size:.85rem;display:grid;justify-items:center;gap:8px}
+.cue i{width:2px;height:38px;background:linear-gradient(var(--sun),transparent);animation:cue 1.8s infinite}
+@keyframes cue{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+#bar{position:fixed;top:0;left:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--foam),var(--sun));z-index:40}
+#nx{position:fixed;left:50%;bottom:calc(18px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:30;display:flex;gap:12px;align-items:center;cursor:pointer;border:1px solid rgba(127,214,207,.5);background:rgba(6,21,31,.82);backdrop-filter:blur(12px);color:#fff;font:500 .92rem "DM Sans";padding:11px 20px;border-radius:99px;transition:opacity .4s,transform .4s}
+#nx b{color:var(--sun);animation:bn 1.4s infinite}@keyframes bn{50%{transform:translateY(5px)}}
+#nx.off{opacity:0;pointer-events:none;transform:translate(-50%,16px)}
+@media(prefers-reduced-motion:reduce){</style>
+<script>document.documentElement.classList.add("js")</script></head>
+<body><div id="bar"></div><button id="nx" class="off" type="button"><span>Sigue</span><b>↓</b></button>
+<nav><div class="w"><a class="logo" href="#inicio" style="display:flex;align-items:center;gap:12px"><img src="img/logo-bfuel.png" alt="Logo BFUEL" style="width:46px;height:46px;border-radius:50%;background:#fff;object-fit:cover">B<i>FUEL</i></a>
+<ul><li><a href="#combustible">Combustible</a></li><li><a href="#club">Club</a></li><li><a href="#wash">BfuelWash</a></li><li><a href="#empresas">Empresas</a></li><li><a href="#empleo">Empleo</a></li></ul>
+<a class="btn" href="#wash" style="padding:10px 22px">Reservar lavado</a><button class="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mm"><i></i><i></i><i></i></button></div></nav><div class="mm" id="mm"><a href="#combustible">Combustible</a><a href="#club">Club BFUEL</a><a href="#wash">BfuelWash</a><a href="#empresas">Empresas y profesionales</a><a href="#colabora">Colabora con BFUEL</a><a href="#empleo">Trabaja con nosotros</a><a href="#novedades">Eventos y sorteos</a></div>
+
+<header class="hero" id="inicio"><img class="hero-bg" src="img/1-hero.jpg" alt="Tótem BFUEL Algeciras con precios de combustible">
+
+
+<div class="w"><p class="kick">BFUEL · Algeciras y Campamento</p><h1>Siempre cerca.<br>Siempre contigo.</h1>
+
+<p class="tag">Porque somos de aquí, <em>y trabajamos cada día por el Campo de Gibraltar.</em></p><div class="cta"><a class="btn" href="#wash">Reservar lavado BfuelWash</a><a class="btn o" href="#empresas">Soy empresa o profesional</a></div></div>
+<div class="cue" aria-hidden="true">Desliza<i></i></div></header>
+
+<section class="sec" id="equipo"><div class="w team-wrap"><h2 class="rv">Caras que conoces, en tu gasolinera</h2><div class="ph rv team-photo" style="aspect-ratio:3/2"><img src="img/7-equipo.jpg" alt="El equipo de BFUEL Campamento junto al tótem de la gasolinera" style="object-position:center 40%"><span class="cap">El equipo de BFUEL Campamento</span></div><p class="rv team-note">Un equipo del Campo de Gibraltar que te recibe en Algeciras y Campamento. Aquí te atiende gente de aquí, y se nota.</p></div></section>
+<section class="sec" id="combustible"><div class="w">
+<div class="head"><h2 class="rv">Calidad que impulsa. Ahorro que se nota.</h2><p>Carburantes más limpios y eficientes, pensados para cuidar tu motor y el planeta. Somos una empresa del Campo de Gibraltar y apostamos por la energía solar en nuestras instalaciones.</p></div>
+<div class="g g4">
+<div class="card rv fuel"><h3>Diésel Quality Plus</h3><span>Mejor combustión y motor más limpio.</span></div>
+<div class="card rv fuel"><h3>Sin Plomo 95</h3><span>El de siempre, con la calidad de BFUEL.</span></div>
+<div class="card rv fuel"><h3>GLP AutoGas</h3><span>Una alternativa económica y más limpia.</span></div>
+<div class="card rv fuel"><h3>AdBlue</h3><span>Para que tu diésel cumpla y rinda.</span></div></div><div class="ph rv" style="aspect-ratio:21/9;margin-top:22px"><img src="img/6-glp.jpg" alt="Surtidor de GLP AutoGas y zona de lavado autoservicio de BFUEL" style="object-position:center 55%"><span class="cap">Surtidor GLP AutoGas y zona de lavado autoservicio</span></div></div></section>
+
+<section class="sec dark" id="club"><div class="w split">
+<div><h2 class="rv">Cada repostaje suma</h2><p style="margin-top:22px;color:var(--muted)">Descarga la app CLUB BFUEL, acumula BFUEL COINS y canjéalos por regalos.</p>
+<div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn" href="https://apps.apple.com/es/app/club-bfuel/id6741570547">Descargar para iOS</a><a class="btn o" href="https://play.google.com/store/apps/details?id=com.copermatica.fideliza.esbfuel">Descargar para Android</a></div><div class="ph rv" style="aspect-ratio:754/518;margin-top:34px;background:#eef2f4"><img src="img/app-club.jpg" alt="App Club BFUEL en el móvil" style="object-fit:contain;transform:none"></div></div>
+<div class="g g2"><div class="card rv"><span class="coin">B</span><h3>Premios al repostar</h3></div><div class="card rv"><span class="coin">€</span><h3>Regalos con BFUEL COINS</h3></div><div class="card rv"><span class="coin">%</span><h3>Promos exclusivas</h3></div><div class="card rv"><span class="coin">!</span><h3>Sorpresas cada semana</h3></div></div></div></section>
+
+<section class="sec dark" id="linense"><div class="w"><div class="head"><h2 class="rv">Patrocinador oficial de la Real Balompédica Linense</h2><p class="rv">BFUEL y la Real Balompédica Linense hicieron una sesión de fotos en nuestras estaciones. Si eres abonado del club, tienes más descuentos en BFUEL.</p></div>
+<div class="g" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr));align-items:center"><div class="ph rv" style="aspect-ratio:1/1"><img src="img/8-linense1.jpg" alt="Jugadores de la Real Balompédica Linense en BFUEL Shop" style="object-position:center 30%"><span class="cap">En BFUEL Shop</span></div><div class="ph rv" style="aspect-ratio:1/1"><img src="img/9-linense2.jpg" alt="Jugador de la Real Balompédica Linense repostando en BFUEL" style="object-position:center 30%"><span class="cap">Repostando con BFUEL</span></div></div></div></section>
+<section class="sec" id="wash"><div class="w">
+<div class="head"><h2 class="wash-title">BfuelWash</h2><p class="wash-sub">Tu coche, como de estreno.</p><p>Elige el tipo de limpieza, consulta qué incluye y reserva tu hueco en el mismo sitio.</p></div>
+<div class="wash-hero rv"><img src="img/wash-manual.jpg" alt="Operario de BFUEL Wash limpiando la llanta de un coche a mano"><div class="wash-txt"><span class="kick">Lavado manual BFUEL</span><h3>Disfruta de nuestro lavado manual.</h3><p>Deja tu coche en buenas manos.</p><small>Cada detalle, a mano.</small></div></div>
+<div class="split">
+<div>
+<div class="svcs"><div class="card svc"><h3>Detailing exterior</h3><p>Recuperamos el brillo y la protección de la carrocería, con material profesional.</p><ul><li>Descontaminación de carrocería: clay y tratamiento de contaminantes ferrosos</li><li>Limpieza de llantas y pasos de rueda</li><li>Lavado y secado a mano con microfibra</li><li>Abrillantado y protección de pintura</li></ul><p class="price">Desde <b>45 €</b> <small>precio orientativo</small></p><button class="btn o svc-btn" type="button" data-s="Detailing exterior">Reservar detailing exterior</button></div><div class="card svc"><h3>Detailing interior</h3><p>Un habitáculo limpio y cuidado de arriba abajo.</p><ul><li>Aspirado profundo de asientos, alfombras y maletero</li><li>Limpieza de tapicería con extractor profesional</li><li>Limpieza de salpicadero, consola y puertas</li><li>Limpieza de cristales interiores</li></ul><p class="price">Desde <b>55 €</b> <small>precio orientativo</small></p><button class="btn o svc-btn" type="button" data-s="Detailing interior">Reservar detailing interior</button></div><div class="card svc"><h3>Detailing completo</h3><p>Exterior e interior a fondo en una sola visita, con acabado profesional.</p><ul><li>Todo el servicio de detailing exterior</li><li>Todo el servicio de detailing interior</li><li>Ideal antes de vender o de un viaje largo</li></ul><p class="price">Desde <b>95 €</b> <small>precio orientativo</small></p><button class="btn o svc-btn" type="button" data-s="Detailing completo">Reservar detailing completo</button></div></div>
+</div>
+<div class="card rv dark book" id="book-card" style="--card:#0e2f42"><form id="book" novalidate><div class="bk-h"><small>Reservar</small><b>BfuelWash Algeciras</b></div><div class="bk-step"><i>01</i><h4>Lavado</h4></div><div class="bk-svc"><button type="button" class="bk-s" data-s="Detailing exterior" aria-pressed="false"><b>exterior</b><small>30 min</small><em>45 €</em></button><button type="button" class="bk-s" data-s="Detailing interior" aria-pressed="false"><b>interior</b><small>30 min</small><em>55 €</em></button><button type="button" class="bk-s" data-s="Detailing completo" aria-pressed="false"><b>completo</b><small>1 hora</small><em>95 €</em></button></div><div class="bk-step"><i>02</i><h4>Día</h4><span id="bk-mon"></span></div><div class="bk-nav"><button type="button" class="bk-arr" id="bk-prev" aria-label="Semana anterior">‹</button><div class="bk-days" id="bk-days"></div><button type="button" class="bk-arr" id="bk-next" aria-label="Semana siguiente">›</button></div><div class="bk-leg"><span><i class="dot l"></i>Libre</span><span><i class="dot p"></i>Pocos huecos</span><span><i class="dot n"></i>Sin huecos</span></div><div class="bk-step"><i>03</i><h4>Hora</h4></div><div id="bk-slots" aria-live="polite"></div><div class="bk-step"><i>04</i><h4>Tus datos</h4></div><div class="row"><label>Nombre<input name="n" required autocomplete="name"></label><label>Teléfono<input name="t" type="tel" required autocomplete="tel"></label></div><div class="row"><label>Email<input name="m" type="email" required autocomplete="email"></label><label>Matrícula y modelo<input name="v" required></label></div><label class="chk"><input type="checkbox" name="c" required><span>Acepto la <button type="button" class="lnk" data-dlg>política de privacidad</button> y el tratamiento de mis datos para gestionar la reserva.</span></label><p class="err" role="alert"></p><div class="bk-bar"><div><small id="bk-hint">Elige una hora</small><span id="bk-name"></span></div><div class="bk-pr"><b id="bk-price"></b><small>precio orientativo</small></div><button class="btn" type="submit">Confirmar reserva</button></div></form><div class="ok" role="status"><h3>Reserva recibida</h3><p id="bk-ok" style="margin:8px 0 0"></p></div></div>
+</div></div></section>
+
+<section class="sec" id="tienda" style="padding-top:0"><div class="w g g2">
+<div class="card im rv"><div class="ph"><img src="img/3-tienda.jpg" alt="Estantería de snacks de la tienda BFUEL Shop" style="object-position:center"></div><h3>BFUEL Shop</h3><p style="margin-top:10px;color:var(--muted)">Snacks, bebidas, artículos de viaje, higiene y regalos. Pan y bollería recién hechos cada día, carbón y bombonas de butano. Consulta el horario de tu estación.</p></div>
+<div class="card im rv"><div class="ph"><img src="img/2-inpost.jpg" alt="Locker InPost 24 h en una estación BFUEL" style="object-position:center 35%"></div><h3>Lockers InPost y Amazon</h3><p style="margin-top:10px;color:var(--muted)">Compra online y recoge aquí, sin colas ni horarios. También devoluciones. Disponible 24 h en Algeciras y Campamento.</p></div></div></section>
+
+<section class="sec dark" id="empresas"><div class="w split">
+<div><h2 class="rv">Tu flota, tu negocio, nuestro ahorro</h2><p style="margin-top:22px;color:var(--muted)">Cuéntanos qué necesitas y te preparamos una propuesta a medida.</p>
+<div class="g"><div class="card rv"><h3>Tarjeta de descuento para profesionales</h3></div><div class="card rv"><h3>Facturas digitales</h3></div><div class="card rv"><h3>Descuentos para flotas</h3></div></div><div class="ph cards rv" role="img" aria-label="Tarjeta Azul Plus para empresas" style="--bp:center 39%;aspect-ratio:16/9;margin-top:22px"><span class="cap">Tarjeta Azul Plus, la tarjeta para empresas</span></div></div>
+<div class="card rv"><form id="f-b2b" novalidate>
+<div class="row"><label>Empresa<input name="a" required></label><label>CIF<input name="b" required></label></div>
+<div class="row"><label>Persona de contacto<input name="n" required></label><label>Cargo<input name="g"></label></div>
+<div class="row"><label>Email<input name="m" type="email" required></label><label>Teléfono<input name="t" type="tel" required></label></div>
+<label>Servicios que te interesan<select name="s"><option>Tarjeta de descuento para profesionales</option><option>Facturas digitales</option><option>Descuentos para flotas</option><option>Varios de ellos</option></select></label>
+<label>Número de vehículos<input name="q" type="number" min="1"></label>
+<label>Mensaje<textarea name="x" rows="3"></textarea></label>
+<label class="chk"><input type="checkbox" name="c" required><span>Acepto la <button type="button" class="lnk" data-dlg>política de privacidad</button>.</span></label>
+<p class="err" role="alert"></p><button class="btn" type="submit">Solicitar propuesta</button></form>
+<div class="ok" role="status"><h3>Solicitud enviada</h3><p style="margin:8px 0 0">Nuestro equipo de empresas te contactará pronto.</p></div></div></div></section>
+
+<section class="sec" id="empleo"><div class="w split">
+<div><h2 class="rv">Trabaja con nosotros</h2><p style="margin-top:22px;color:var(--muted)">Somos una empresa local que crece con su tierra. Si quieres formar parte del equipo de Algeciras o Campamento, déjanos tus datos.</p></div>
+<div class="card rv dark" style="--card:#0e2f42"><form id="f-job" novalidate>
+<div class="row"><label>Nombre y apellidos<input name="n" required></label><label>Email<input name="m" type="email" required></label></div>
+<div class="row"><label>Teléfono<input name="t" type="tel" required></label><label>Estación preferida<select><option>Algeciras</option><option>Campamento</option><option>Indiferente</option></select></label></div>
+<label>Puesto de interés<select><option>Atención en tienda</option><option>Pista y surtidores</option><option>BfuelWash y detailing</option><option>Otro</option></select></label>
+<label>Cuéntanos sobre ti<textarea rows="3"></textarea></label>
+<label>Currículum (opcional)<input type="file" accept=".pdf,.doc,.docx"></label>
+<label class="chk"><input type="checkbox" name="c" required><span>He leído y acepto la <button type="button" class="lnk" data-dlg>política de privacidad</button> y consiento el tratamiento de mis datos para procesos de selección.</span></label>
+<p class="err" role="alert"></p><button class="btn" type="submit">Enviar candidatura</button></form>
+<div class="ok" role="status"><h3>Candidatura recibida</h3><p style="margin:8px 0 0">Gracias por tu interés. Revisaremos tu perfil.</p></div></div></div></section>
+
+<section class="sec dark" id="colabora"><div class="w split"><div><h2 class="rv">Colabora con BFUEL</h2><p class="rv" style="margin-top:22px;color:var(--muted)">Si tu empresa tiene una propuesta para BFUEL, queremos escucharla. Cuéntanosla y pide una reunión con la dirección.</p><div class="g"><div class="card rv"><h3>Ofrecer servicios o productos</h3><p style="margin:8px 0 0;color:var(--muted);font-size:.95rem">Proveedores y empresas con soluciones para nuestras estaciones.</p></div><div class="card rv"><h3>Publicidad y patrocinio en eventos</h3><p style="margin:8px 0 0;color:var(--muted);font-size:.95rem">Presencia de marca en los eventos y acciones de BFUEL.</p></div><div class="card rv"><h3>Promociones y sorteos conjuntos</h3><p style="margin:8px 0 0;color:var(--muted);font-size:.95rem">Campañas compartidas para clientes del club y de la zona.</p></div><div class="card rv"><h3>Otras alianzas</h3><p style="margin:8px 0 0;color:var(--muted);font-size:.95rem">Cualquier idea que sume para ambas partes.</p></div></div></div><div class="card rv"><form id="f-collab" novalidate><div class="row"><label>Empresa<input name="a" required autocomplete="organization"></label><label>Persona de contacto<input name="n" required autocomplete="name"></label></div><div class="row"><label>Cargo<input name="g"></label><label>Teléfono<input name="t" type="tel" required autocomplete="tel"></label></div><label>Email<input name="m" type="email" required autocomplete="email"></label><label>Tipo de colaboración<select name="s"><option>Ofrecer servicios o productos</option><option>Publicidad y patrocinio en eventos</option><option>Promociones y sorteos conjuntos</option><option>Otra alianza</option></select></label><label>Formato de reunión preferido<select name="r"><option>Presencial</option><option>Videollamada</option><option>Llamada telefónica</option></select></label><label>Tu propuesta<textarea name="x" rows="4" required placeholder="Cuéntanos quién eres y qué propones"></textarea></label><label class="chk"><input type="checkbox" name="c" required><span>Acepto la <button type="button" class="lnk" data-dlg>política de privacidad</button> y el tratamiento de mis datos para gestionar esta propuesta.</span></label><p class="err" role="alert"></p><button class="btn" type="submit">Solicitar reunión</button></form><div class="ok" role="status"><h3>Propuesta enviada</h3><p style="margin:8px 0 0">Gracias. La revisaremos y nos pondremos en contacto contigo para valorar una reunión.</p></div></div></div></section>
+
+<section class="sec" id="novedades" style="padding-top:0"><div class="w"><div class="news">
+<div style="max-width:640px"><h2>Eventos y sorteos, antes que nadie</h2><p style="margin-top:16px">Apúntate y te avisamos de cada evento, sorteo y promoción de BFUEL.</p></div>
+<form id="f-news" novalidate style="margin-top:34px;grid-template-columns:1fr;max-width:640px;gap:18px">
+<label>Tu email<input name="m" type="email" required placeholder="tu@email.com" autocomplete="email" style="background:#fff;color:#111;border:0;font-size:1.05rem;padding:18px 20px"></label>
+<label class="chk" style="font-weight:400"><input type="checkbox" name="c" required><span>Acepto recibir comunicaciones y la <button type="button" class="lnk" data-dlg>política de privacidad</button>.</span></label>
+<p class="err" role="alert"></p>
+<button class="btn" type="submit" style="background:#0A1F2C;color:#fff;justify-self:start">Suscribirme</button></form>
+<div class="ok" role="status" style="border-color:#0A1F2C;background:rgba(10,31,44,.08);color:#1a1200;max-width:640px"><h3>Ya estás dentro</h3><p style="margin:8px 0 0">Te avisaremos de los próximos eventos y sorteos.</p></div>
+</div></div></section>
+
+<footer><div class="w g">
+<div><a class="logo" href="#inicio" style="color:#fff">B<i>FUEL</i></a><p>Energía que mueve a nuestra tierra.</p></div>
+<div><a href="#combustible">Combustible</a><a href="#wash">BfuelWash</a><a href="#empresas">Empresas y profesionales</a><a href="#empleo">Trabaja con nosotros</a><a href="#colabora">Colabora con nosotros</a></div>
+<div><a href="https://www.facebook.com/share/1EFLjY4qkD/">Facebook</a><a href="https://www.instagram.com/bfuelcampodegibraltar">Instagram</a><a href="https://www.bfuelgasolineras.com/contacto">Encuéntranos</a></div>
+<div><a href="#" data-dlg>Política de privacidad</a><a href="https://www.bfuelgasolineras.com/política-de-privacidad-1">Política de cookies</a><a href="https://www.bfuelgasolineras.com/política-de-privacidad-2">Aviso legal</a></div></div>
+<div class="w" style="margin-top:40px;font-size:.8rem;opacity:.75"><p style="max-width:none">La Ballena Algeciras S.L. y La Ballena Campamento S.L. han recibido una ayuda de la Unión Europea con cargo al Fondo NextGenerationEU para la instalación fotovoltaica para autoconsumo, gestionada por la Junta de Andalucía a través de la Agencia Andaluza de la Energía.</p><p>© Bfuel Gasolineras 2026</p></div></footer>
+
+<dialog id="dlg"><h3>Política de privacidad</h3>
+<p><b>Responsables:</b> La Ballena Algeciras S.L. y La Ballena Campamento S.L.</p>
+<p><b>Finalidad:</b> gestionar tus reservas, solicitudes de empresas, candidaturas y el envío de comunicaciones que hayas aceptado.</p>
+<p><b>Base legal:</b> tu consentimiento y la ejecución de tu solicitud.</p>
+<p><b>Derechos:</b> acceso, rectificación, supresión, oposición, limitación y portabilidad, escribiendo al correo de contacto de BFUEL.</p>
+<p><b>Conservación:</b> los datos de candidaturas se guardan el tiempo necesario para el proceso de selección.</p>
+<form method="dialog"><button class="btn">Cerrar</button></form></dialog>
+
+<script>
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+const ST={res:['Pendiente','Confirmada','Completada','Cancelada'],col:['Nuevo','En conversación','Reunión agendada','Descartada'],job:['Nuevo','En revisión','Entrevista','Contratado','Descartado'],b2b:['Nuevo','Contactado','Propuesta enviada','Cerrado'],news:['Activo','Baja']};
+const Store={k:'bfuel-db',get(){try{return JSON.parse(localStorage.getItem(Store.k))||{}}catch(e){return{}}},put(o){try{localStorage.setItem(Store.k,JSON.stringify(o))}catch(e){}},
+add(c,r){const o=Store.get();(o[c]=o[c]||[]).unshift({id:Date.now().toString(36)+Math.random().toString(36).slice(2,5),ts:new Date().toISOString(),status:ST[c][0],note:'',f:r});Store.put(o)},
+upd(c,id,p){const o=Store.get(),r=(o[c]||[]).find(x=>x.id===id);if(r)Object.assign(r,p);Store.put(o)},
+del(c,id){const o=Store.get();o[c]=(o[c]||[]).filter(x=>x.id!==id);Store.put(o)}};
+const formData=f=>{const r={};$$('label',f).forEach(l=>{const i=l.querySelector('input,select,textarea');if(!i||i.type==='checkbox'||i.type==='hidden')return;const k=l.firstChild.textContent.trim(),v=i.type==='file'?(i.files[0]?.name||''):i.value.trim();if(v)r[k]=v});return r};
+$$('[data-dlg]').forEach(b=>b.onclick=e=>{e.preventDefault();$('#dlg').showModal()});
+$$('form[id^=f-]').forEach(f=>f.addEventListener('submit',e=>{e.preventDefault();const er=$('.err',f);
+const bad=$$('[required]',f).find(i=>i.type=='checkbox'?!i.checked:!i.value.trim()||!i.checkValidity());
+if(bad){er.textContent=bad.type=='checkbox'?'Acepta la política de privacidad para continuar.':'Revisa el campo «'+(bad.closest('label')?.firstChild.textContent||'obligatorio').trim()+'».';bad.focus();return}
+er.textContent='';const c={'f-b2b':'b2b','f-job':'job','f-collab':'col','f-news':'news'}[f.id];if(c)Store.add(c,formData(f));f.style.display='none';f.nextElementSibling.classList.add('on')}));
+
+(()=>{
+const SV={'Detailing exterior':{m:30,p:45},'Detailing interior':{m:30,p:55},'Detailing completo':{m:60,p:95}};
+const BLK=[[540,840,'Mañana'],[960,1200,'Tarde']],DS=['DOM','LUN','MAR','MIÉ','JUE','VIE','SÁB'],MS=['ENERO','FEBRERO','MARZO','ABRIL','MAYO','JUNIO','JULIO','AGOSTO','SEPTIEMBRE','OCTUBRE','NOVIEMBRE','DICIEMBRE'];
+const f=$('#book'),st={s:'Detailing exterior',d:null,t:null,w:0};
+const iso=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+const hm=m=>String(Math.floor(m/60)).padStart(2,'0')+':'+String(m%60).padStart(2,'0');
+const pd=k=>{const[y,m,d]=k.split('-').map(Number);return new Date(y,m-1,d)};
+let saved={};try{saved=JSON.parse(localStorage.getItem('bfuel-res')||'{}')}catch(e){}
+const hash=s=>{let h=2166136261;for(const c of s){h^=c.charCodeAt(0);h=Math.imul(h,16777619)}return h>>>0};
+const busy=(k,c)=>(saved[k]||[]).includes(c)||hash(k+':'+c)%100<28;
+const today=()=>{const n=new Date();return new Date(n.getFullYear(),n.getMonth(),n.getDate())};
+function slots(date){const k=iso(date),m=SV[st.s].m,out=[];if(date.getDay()===0||date<today())return out;
+const n=new Date(),nowM=iso(n)===k?n.getHours()*60+n.getMinutes()+60:0;
+BLK.forEach(([a,b],bi)=>{for(let t=a;t+m<=b;t+=30){if(t<nowM)continue;let ok=true;for(let c=t;c<t+m;c+=30)if(busy(k,c)){ok=false;break}if(ok)out.push([t,bi])}});return out}
+function monday(w){const d=today();d.setDate(d.getDate()-((d.getDay()+6)%7)+w*7);return d}
+function days(){const o=[],m=monday(st.w);for(let i=0;i<7;i++){const d=new Date(m);d.setDate(m.getDate()+i);o.push(d)}return o}
+function firstFree(){const d=today();for(let i=0;i<60;i++){if(slots(d).length)return new Date(d);d.setDate(d.getDate()+1)}return null}
+function rDays(){const ds=days(),box=$('#bk-days');box.innerHTML='';
+ds.forEach(d=>{const k=iso(d),n=slots(d).length,b=document.createElement('button');b.type='button';b.className='bk-day';b.dataset.d=k;b.disabled=d<today();b.setAttribute('aria-pressed',st.d===k);
+b.innerHTML='<small>'+DS[d.getDay()]+'</small><b>'+d.getDate()+'</b><i class="dot '+(n>=6?'l':n>0?'p':'n')+'"></i>';
+b.onclick=()=>{st.d=k;st.t=null;render()};box.appendChild(b)});
+const a=MS[ds[0].getMonth()],z=MS[ds[6].getMonth()];$('#bk-mon').textContent=a===z?a:a+' · '+z;
+$('#bk-prev').disabled=st.w<=0;$('#bk-next').disabled=st.w>=8}
+function rSlots(){const box=$('#bk-slots');box.innerHTML='';if(!st.d)return;const sl=slots(pd(st.d));
+if(!sl.length){box.innerHTML='<p class="bk-none">No quedan huecos este día para este lavado. Prueba con otro día.</p>';return}
+BLK.forEach(([a,b,n],bi)=>{const g=sl.filter(x=>x[1]===bi);if(!g.length)return;const h5=document.createElement('h5');h5.textContent=n;const grid=document.createElement('div');grid.className='bk-grid';
+g.forEach(([t])=>{const b=document.createElement('button');b.type='button';b.className='bk-t';b.textContent=hm(t);b.setAttribute('aria-pressed',st.t===t);b.onclick=()=>{st.t=t;render()};grid.appendChild(b)});box.append(h5,grid)})}
+function rBar(){const v=SV[st.s];$('#bk-name').textContent=st.s+' · '+(v.m===60?'1 hora':v.m+' min');$('#bk-price').textContent=v.p+' €';
+$('#bk-hint').textContent=st.t==null?'Elige una hora':DS[pd(st.d).getDay()]+' '+pd(st.d).getDate()+' de '+MS[pd(st.d).getMonth()].toLowerCase()+' · '+hm(st.t)+' a '+hm(st.t+v.m)}
+function render(){$$('.bk-s',f).forEach(b=>b.setAttribute('aria-pressed',b.dataset.s===st.s));rDays();rSlots();rBar()}
+function setSvc(s){st.s=s;const free=slots(st.d?pd(st.d):today());if(st.t!=null&&!slots(pd(st.d)).some(x=>x[0]===st.t))st.t=null;
+if(st.d&&!slots(pd(st.d)).length){const n=firstFree();if(n){st.d=iso(n);st.w=Math.floor((monday(0)<n?Math.round((n-monday(0))/864e5):0)/7)}}render()}
+$$('.bk-s',f).forEach(b=>b.onclick=()=>setSvc(b.dataset.s));
+$('#bk-prev').onclick=()=>{st.w=Math.max(0,st.w-1);rDays()};$('#bk-next').onclick=()=>{st.w=Math.min(8,st.w+1);rDays()};
+const n0=firstFree();if(n0){st.d=iso(n0);st.w=Math.floor(Math.round((n0-monday(0))/864e5)/7)}
+render();
+f.addEventListener('submit',e=>{e.preventDefault();const er=$('.err',f);
+if(!st.d||st.t==null){er.textContent='Elige el día y la hora de tu lavado.';return}
+const bad=$$('[required]',f).find(i=>i.type=='checkbox'?!i.checked:!i.value.trim()||!i.checkValidity());
+if(bad){er.textContent=bad.type=='checkbox'?'Acepta la política de privacidad para continuar.':'Revisa el campo «'+(bad.closest('label')?.firstChild.textContent||'obligatorio').trim()+'».';bad.focus();return}
+const v=SV[st.s];(saved[st.d]=saved[st.d]||[]);for(let c=st.t;c<st.t+v.m;c+=30)saved[st.d].push(c);
+try{localStorage.setItem('bfuel-res',JSON.stringify(saved))}catch(x){}
+Store.add('res',{Servicio:st.s,Día:st.d,Inicio:hm(st.t),Fin:hm(st.t+v.m),Nombre:f.elements.n.value,Teléfono:f.elements.t.value,Email:f.elements.m.value,Vehículo:f.elements.v.value});
+er.textContent='';$('#bk-ok').textContent=st.s+' · '+$('#bk-hint').textContent+'. Te confirmaremos la cita por teléfono o email.';
+f.style.display='none';f.nextElementSibling.classList.add('on')});
+window.bkSet=setSvc;
+})();
+$$('.svc-btn').forEach(b=>b.onclick=()=>{bkSet(b.dataset.s);$$('.svc-btn').forEach(x=>x.classList.toggle('on',x===b));$('#book-card').scrollIntoView({behavior:'smooth',block:'start'})});
+(()=>{const rm=matchMedia('(prefers-reduced-motion:reduce)').matches,rv=$$('.rv');
+rv.forEach(e=>{const s=[...e.parentElement.children].filter(c=>c.classList.contains('rv'));e.style.setProperty('--d',Math.min(s.indexOf(e),5)*.09+'s')});
+
+const bar=$('#bar'),nx=$('#nx'),imgs=$$('.ph img'),secs=[['equipo','Nuestro equipo'],['combustible','Combustibles y GLP'],['club','Club BFUEL'],['linense','Real Balompédica Linense'],['wash','BfuelWash'],['tienda','Tienda y lockers'],['empresas','Tarjetas para empresas'],['empleo','Trabaja con nosotros'],['colabora','Colabora con BFUEL'],['novedades','Eventos y sorteos']].map(([i,t])=>[$('#'+i),t]);
+let tk=0;function upd(){tk=0;const y=scrollY,h=innerHeight,mx=document.documentElement.scrollHeight-h;
+bar.style.transform='scaleX('+(mx>0?y/mx:0)+')';
+if(!rm)imgs.forEach(m=>{const r=m.parentElement.getBoundingClientRect();if(r.bottom<0||r.top>h)return;m.style.transform='translateY('+((r.top+r.height/2-h/2)*-.07).toFixed(1)+'px) scale(1.14)'});
+const n=secs.find(([e])=>e.getBoundingClientRect().top>h*.5);
+const bc=$('#book-card').getBoundingClientRect();nx.classList.toggle('off',!n||y<250||(bc.top<h&&bc.bottom>0));if(n){nx.firstChild.textContent='Sigue: '+n[1];nx.dataset.t='#'+n[0].id}}
+addEventListener('scroll',()=>{if(!tk)tk=requestAnimationFrame(upd)},{passive:true});addEventListener('resize',upd);addEventListener('load',upd);upd();
+nx.onclick=()=>$(nx.dataset.t).scrollIntoView({behavior:'smooth'})})();
+
+
+(()=>{const b=document.querySelector('.burger'),m=document.getElementById('mm');const t=v=>{m.classList.toggle('on',v);b.setAttribute('aria-expanded',v)};b.onclick=()=>t(!m.classList.contains('on'));m.querySelectorAll('a').forEach(a=>a.onclick=()=>t(false));addEventListener('resize',()=>{if(innerWidth>900)t(false)})})();
+</script>
+</body>
+</html>
